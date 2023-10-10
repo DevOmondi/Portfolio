@@ -18,7 +18,7 @@ const Skills = () => {
         </div>
         <div>
           <h1 className="text-2xl font-bold">React JS</h1>
-          <p className="text-lightGrey">1 Year Experience</p>
+          <p className="text-lightGrey">2 Year Experience</p>
         </div>
         <div>
           <h1 className="text-2xl font-bold">Responsive Design</h1>

@@ -1,5 +1,6 @@
 // import React from 'react'
 import ProjectCard from "./ProjectCard";
+import audiophileImg from "../assets/audiophile.png";
 import binaryPayImg from "../assets/Binary Pay.png";
 import countriesImg from "../assets/Countries __ Where in the world_.png";
 import devfinderImg from "../assets/devfinder __ stalk that dev.png";
@@ -23,23 +24,30 @@ const Projects = () => {
       {/* Project cards section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 lg:w-[90%] lg:mx-auto gap-[2rem] mt-[2rem] pb-[4rem]">
         <ProjectCard
+          projectImg={audiophileImg}
+          projectTitle="AUDIOPHILE E-COMMERCE PLATFORM"
+          projectLang={["TAILWINDCSS", "JAVASCRIPT", "REACTJS"]}
+          siteLink="https://doba.netlify.app/"
+          codeLink="https://github.com/DevOmondi/audiophile_ecommerce.git"
+        />
+        <ProjectCard
           projectImg={binaryPayImg}
           projectTitle="BINARY PAY DASHBOARD"
-          projectLang={["HTML", "CSS", "JAVASCRIPT"]}
+          projectLang={["MATERIALUI", "JAVASCRIPT", "REACTJS"]}
           siteLink="https://admin.binarypay.co.ke/"
           codeLink="https://github.com/DevOmondi/Binary-Pay-Dashboard"
         />
         <ProjectCard
           projectImg={countriesImg}
           projectTitle="COUNTRIES WEB APP"
-          projectLang={["HTML", "CSS", "JAVASCRIPT"]}
+          projectLang={["API", "TAILWINDCSS", "JAVASCRIPT", "REACTJS"]}
           siteLink="https://sakacountry.netlify.app/"
           codeLink="https://github.com/DevOmondi/countries_api_app"
         />
         <ProjectCard
           projectImg={devfinderImg}
           projectTitle="DEVFINDER WEB APP"
-          projectLang={["HTML", "CSS", "JAVASCRIPT"]}
+          projectLang={["API", "TAILWINDCSS", "JAVASCRIPT", "REACTJS"]}
           siteLink="https://sakadev.netlify.app/"
           codeLink="https://github.com/DevOmondi/Devfinder"
         />
