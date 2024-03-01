@@ -1,5 +1,6 @@
 // import React from 'react'
 import ProjectCard from "./ProjectCard";
+
 import audiophileImg from "../assets/audiophile.png";
 import binaryPayImg from "../assets/Binary Pay.png";
 import countriesImg from "../assets/Countries __ Where in the world_.png";
@@ -7,6 +8,7 @@ import devfinderImg from "../assets/devfinder __ stalk that dev.png";
 import countdownTimerImg from "../assets/Countdown Timer.png";
 import youtubeCloneImg from "../assets/YouTube.png";
 import whackamoleImg from "../assets/Whack A Mole!.png";
+import DictionaryImg from "../assets/Dictionary.png";
 
 const Projects = () => {
   return (
@@ -71,6 +73,13 @@ const Projects = () => {
           projectLang={["HTML", "CSS", "JAVASCRIPT"]}
           siteLink="https://devomondi.github.io/whack-a-mole-game/"
           codeLink="https://github.com/DevOmondi/whack-a-mole-game"
+        />
+        <ProjectCard
+          projectImg={DictionaryImg}
+          projectTitle="DICTIONARY WEB APP"
+          projectLang={["API", "TAILWINDCSS", "JAVASCRIPT", "REACTJS"]}
+          siteLink="https://ngoso.netlify.app/"
+          codeLink="https://github.com/DevOmondi/Dictionary-web-app"
         />
       </div>
     </div>

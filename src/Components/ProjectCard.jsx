@@ -17,7 +17,7 @@ const ProjectCard = ({
           <p key={index}>{lang}</p>
         ))}
       </div>
-      <div className="flex gap-3 lg:hidden">
+      <div className="flex gap-3">
         <div>
           <p className="text-center  tracking-wide hover:text-lightGreen hover:cursor-pointer">
             <a href={siteLink} target="_blank" rel="noopener noreferrer">
