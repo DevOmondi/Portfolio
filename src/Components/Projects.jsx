@@ -5,7 +5,7 @@ import audiophileImg from "../assets/audiophile.png";
 import binaryPayImg from "../assets/Binary Pay.png";
 import countriesImg from "../assets/Countries __ Where in the world_.png";
 import devfinderImg from "../assets/devfinder __ stalk that dev.png";
-import countdownTimerImg from "../assets/Countdown Timer.png";
+import dokiMisImg from "../assets/Doki-Healthcare-MIS.png";
 import youtubeCloneImg from "../assets/YouTube.png";
 import whackamoleImg from "../assets/Whack A Mole!.png";
 import DictionaryImg from "../assets/Dictionary.png";
@@ -47,19 +47,20 @@ const Projects = () => {
           codeLink="https://github.com/DevOmondi/countries_api_app"
         />
         <ProjectCard
+          projectImg={dokiMisImg}
+          projectTitle="HEALTHCARE WEB APP"
+          projectLang={["NEXTJS", "TAILWINDCSS", "APPWRITE"]}
+          siteLink="https://meet-doki.vercel.app/"
+          codeLink="https://github.com/DevOmondi/Doki"
+        />
+        <ProjectCard
           projectImg={devfinderImg}
           projectTitle="DEVFINDER WEB APP"
           projectLang={["API", "TAILWINDCSS", "JAVASCRIPT", "REACTJS"]}
           siteLink="https://sakadev.netlify.app/"
           codeLink="https://github.com/DevOmondi/Devfinder"
         />
-        <ProjectCard
-          projectImg={countdownTimerImg}
-          projectTitle="COUNTDOWN TIMER"
-          projectLang={["HTML", "CSS", "JAVASCRIPT"]}
-          siteLink="https://devomondi.github.io/CountDownTimer/"
-          codeLink="https://github.com/DevOmondi/CountDownTimer"
-        />
+
         <ProjectCard
           projectImg={youtubeCloneImg}
           projectTitle="YOUTUBE CLONE"
