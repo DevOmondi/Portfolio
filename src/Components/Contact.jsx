@@ -30,6 +30,12 @@ const Contact = () => {
             I would love to hear about your project and how I could help. Please
             fill in the form, and I’ll get back to you as soon as possible.
           </p>
+          <p className="mx-[2rem] lg:mx-auto font-bold text-center lg:text-left pb-[3rem] text-2xl text-lightGrey">
+            +254796178227
+          </p>
+          <p className="mx-[2rem] lg:mx-auto font-bold text-center lg:text-left pb-[3rem] text-xl text-lightGrey">
+            collinsomondi778@gmail.com
+          </p>
         </div>
         {/* Form Section */}
         <div>
