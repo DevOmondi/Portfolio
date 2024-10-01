@@ -5,6 +5,8 @@ import {
   BsLinkedin,
   BsTwitter,
 } from "react-icons/bs";
+
+import { Link } from "react-scroll";
 import profileImg from "../assets/profileImg.png";
 
 const Header = () => {
@@ -49,9 +51,11 @@ const Header = () => {
             Based in Kenya, I’m a front-end developer <br /> passionate about
             building accessible web apps that users love.
           </p>
-          <p className="text-center mt-[2rem] tracking-wide hover:text-lightGreen hover:cursor-pointer lg:mr-[1.8rem] lg:text-right md:mr-[1.8rem] md:text-right">
-            CONTACT ME
-          </p>
+          <Link to="target-contact-section" smooth={true} duration={500}>
+            <p className="text-center mt-[2rem] tracking-wide hover:text-lightGreen hover:cursor-pointer lg:mr-[1.8rem] lg:text-right md:mr-[1.8rem] md:text-right">
+              CONTACT ME
+            </p>
+          </Link>
           <div className="h-[2px] w-[6.5rem] mt-[0.5rem] bg-lightGreen mx-auto lg:mr-[1.5rem]  md:mr-[1.5rem]"></div>
         </div>
       </div>

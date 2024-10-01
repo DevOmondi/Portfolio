@@ -1,4 +1,5 @@
 // import React from 'react'
+import { Link } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 
 import audiophileImg from "../assets/audiophile.png";
@@ -17,9 +18,11 @@ const Projects = () => {
         <h1 className="text-3xl font-bold lg:text-7xl md:text-5xl">Projects</h1>
 
         <div>
-          <p className="text-center  tracking-wide hover:text-lightGreen hover:cursor-pointer">
-            CONTACT ME
-          </p>
+          <Link to="target-contact-section" smooth={true} duration={500}>
+            <p className="text-center  tracking-wide hover:text-lightGreen hover:cursor-pointer">
+              CONTACT ME
+            </p>
+          </Link>
           <div className="h-[2px] w-[6.5rem] mt-[0.5rem] bg-lightGreen mx-auto"></div>
         </div>
       </div>
