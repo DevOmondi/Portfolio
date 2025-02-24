@@ -1,11 +1,14 @@
 // import React from 'react'
 import { useState } from "react";
 import { Element } from "react-scroll";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [nameFocus, setNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [messageFocus, setMessageFocus] = useState(false);
+
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
 
   // TODO: Func to handle focus event on name input
   const handleNameInputFocus = () => {
@@ -19,6 +22,28 @@ const Contact = () => {
   const handleMessageInputFocus = () => {
     setMessageFocus(!messageFocus);
   };
+
+  const handleFormChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data:", formData)
+
+    emailjs
+      .sendForm('service_jsuc41l', 'template_9efi666', formData, {
+        publicKey: 'yfm_5e1XddkHTh98_',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  }
   // console.log(focus)
   return (
     <Element name="target-contact-section">
@@ -42,33 +67,35 @@ const Contact = () => {
           </div>
           {/* Form Section */}
           <div>
-            <form>
+            <form onSubmit={handleSubmit}>
               {/* Name */}
               <div>
                 <input
                   type="text"
+                  name="name"
+                  onChange={handleFormChange}
                   placeholder="NAME"
                   className="w-[90%] pl-[2rem] bg-darkGrey focus:outline-none"
                   onFocus={handleNameInputFocus}
                 />
                 <div
-                  className={`${
-                    nameFocus ? "bg-lightGreen" : "bg-lightGrey"
-                  } h-[1px] w-[90%] mt-[1rem] mx-auto`}
+                  className={`${nameFocus ? "bg-lightGreen" : "bg-lightGrey"
+                    } h-[1px] w-[90%] mt-[1rem] mx-auto`}
                 ></div>
               </div>
               {/* EMAIL */}
               <div className="mt-[2rem]">
                 <input
                   type="text"
+                  name="email"
+                  onChange={handleFormChange}
                   placeholder="EMAIL"
                   className="w-[90%] pl-[2rem] bg-darkGrey focus:outline-none"
                   onFocus={handleEmailInputFocus}
                 />
                 <div
-                  className={`${
-                    emailFocus ? "bg-lightGreen" : "bg-lightGrey"
-                  } h-[1px] w-[90%] mt-[1rem] mx-auto`}
+                  className={`${emailFocus ? "bg-lightGreen" : "bg-lightGrey"
+                    } h-[1px] w-[90%] mt-[1rem] mx-auto`}
                 ></div>
               </div>
               {/* MESSAGE */}
@@ -77,23 +104,24 @@ const Contact = () => {
                   cols={50}
                   rows={4}
                   type="text"
+                  name="message"
+                  onChange={handleFormChange}
                   placeholder="MESSAGE"
                   className="w-[90%] pl-[2rem] bg-darkGrey focus:outline-none"
                   onFocus={handleMessageInputFocus}
                 />
                 <div
-                  className={`${
-                    messageFocus ? "bg-lightGreen" : "bg-lightGrey"
-                  } h-[1px] w-[90%] mt-[1rem] mx-auto`}
+                  className={`${messageFocus ? "bg-lightGreen" : "bg-lightGrey"
+                    } h-[1px] w-[90%] mt-[1rem] mx-auto`}
                 ></div>
               </div>
               {/* SEND MESSAGE BTN */}
               <div className="flex justify-between items-center w-[90%] mx-auto pb-[5rem]">
                 <div></div>
                 <div className="mt-[2rem]">
-                  <p className="text-center  tracking-wide hover:text-lightGreen hover:cursor-pointer">
+                  <button type="submit" className="text-center  tracking-wide hover:text-lightGreen hover:cursor-pointer">
                     SEND MESSAGE
-                  </p>
+                  </button>
                   <div className="h-[2px] w-[7.5rem] mt-[0.5rem] bg-lightGreen mx-auto"></div>
                 </div>
               </div>
