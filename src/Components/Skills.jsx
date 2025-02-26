@@ -14,19 +14,31 @@ const Skills = () => {
         </div>
         <div>
           <h1 className="text-2xl font-bold">Javascript</h1>
-          <p className="text-lightGrey">2 Years Experience</p>
+          <p className="text-lightGrey">3 Years Experience</p>
         </div>
         <div>
           <h1 className="text-2xl font-bold">React JS</h1>
           <p className="text-lightGrey">2 Year Experience</p>
         </div>
         <div>
+          <h1 className="text-2xl font-bold">Next JS</h1>
+          <p className="text-lightGrey">2 Year Experience</p>
+        </div>
+        <div>
+          <h1 className="text-2xl font-bold">Vue JS</h1>
+          <p className="text-lightGrey">2 Year Experience</p>
+        </div>
+        <div>
+          <h1 className="text-2xl font-bold">Node JS</h1>
+          <p className="text-lightGrey">2 Year Experience</p>
+        </div>
+        <div>
           <h1 className="text-2xl font-bold">Responsive Design</h1>
-          <p className="text-lightGrey">2 Years Experience</p>
+          <p className="text-lightGrey">3 Years Experience</p>
         </div>
         <div>
           <h1 className="text-2xl font-bold">Tailwind CSS</h1>
-          <p className="text-lightGrey">1 Year Experience</p>
+          <p className="text-lightGrey">2 Year Experience</p>
         </div>
       </div>
       <div className="h-[1px] w-[90%] mt-[1rem] bg-lightGrey mx-auto lg:hidden"></div>
