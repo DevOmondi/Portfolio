@@ -40,7 +40,7 @@ const Contact = () => {
           console.log('SUCCESS!');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          console.log('FAILED...', error);
         },
       );
   }
@@ -67,7 +67,7 @@ const Contact = () => {
           </div>
           {/* Form Section */}
           <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id="contactForm">
               {/* Name */}
               <div>
                 <input
