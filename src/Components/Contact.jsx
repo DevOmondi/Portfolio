@@ -1,7 +1,6 @@
 // import React from 'react'
 import { useState } from "react";
 import { Element } from "react-scroll";
-import emailjs from "@emailjs/browser";
 
 import SuccessToast from "./SuccessToast";
 
@@ -18,15 +17,15 @@ const Contact = () => {
 
   const [showSuccessToast, setShowSuccessToast] = useState(false);
 
-  // TODO: Func to handle focus event on name input
+  // Func to handle focus event on name input
   const handleNameInputFocus = () => {
     setNameFocus(!nameFocus);
   };
-  // TODO: Func to handle focus event on email input
+  // Func to handle focus event on email input
   const handleEmailInputFocus = () => {
     setEmailFocus(!emailFocus);
   };
-  // TODO: Func to handle focus event on message input
+  //  Func to handle focus event on message input
   const handleMessageInputFocus = () => {
     setMessageFocus(!messageFocus);
   };
@@ -35,38 +34,39 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
 
-    emailjs
-      .sendForm("service_dmr6gkc", "template_stga1fg", "#contactForm", {
-        publicKey: "yfm_5e1XddkHTh98_"
-      })
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          if(response.status === 200) {
-            setShowSuccessToast(true);
-          }
+    try {
+      const response = await fetch(`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_FORM_ID}`, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          Accept: "application/json",
         },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
+      });
+      console.log("Response:", response);
+      // if (response.ok) {
+        setShowSuccessToast(true);
+      // }
+    } catch (error) {
+      alert("There was an error submitting the form. Please try again later.");
+      console.error("Error submitting form:", error);
+    }
   };
   // console.log(focus)
   return (
     <Element name="target-contact-section">
       <div className="bg-darkGrey ">
         <div>
-        {showSuccessToast && (
-        <SuccessToast 
-          message="Collins will get back to you as soon as possible. 🎊"
-          duration={5000}
-          onClose={() => setShowSuccessToast(false)}
-        />
-      )}
+          {showSuccessToast && (
+            <SuccessToast
+              message="Collins will get back to you as soon as possible. 🎊"
+              duration={5000}
+              onClose={() => setShowSuccessToast(false)}
+            />
+          )}
         </div>
         <div className="lg:flex lg:w-[85%] mx-auto md:w-[70%] lg:pt-[3rem] lg:justify-between">
           <div className="lg:w-[30%]">

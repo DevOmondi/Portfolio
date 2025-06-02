@@ -1,8 +1,8 @@
-import  { useState, useEffect } from 'react';
-import { CheckCircle } from 'lucide-react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from "react";
+import { CheckCircle } from "lucide-react";
+import PropTypes from "prop-types";
 
-const SuccessToast = ({ message , duration = 3000, onClose }) => {
+const SuccessToast = ({ message, duration = 3000, onClose }) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -17,33 +17,35 @@ const SuccessToast = ({ message , duration = 3000, onClose }) => {
   if (!visible) return null;
 
   return (
-    <div 
+    <div
       className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 
-                  flex items-center space-x-2 bg-green-100 border border-lightGreen 
-                  text-green-800 px-4 py-3 rounded-lg shadow-lg
-                  transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0'}`}
+              flex items-center space-x-2 bg-green-600 border-2 border-green-700 
+              text-white px-4 py-3 rounded-lg shadow-2xl
+              transition-opacity duration-300 ${
+                visible ? "opacity-100" : "opacity-0"
+              }`}
       role="alert"
     >
-      <CheckCircle className="w-5 h-5 text-green-500" />
-      <p className="font-medium">{message}</p>
-      <button 
+      <CheckCircle className="w-6 h-6 text-green-200" />
+      <p className="font-bold">{message}</p>
+      <button
         onClick={() => {
           setVisible(false);
           if (onClose) onClose();
         }}
-        className="ml-4 text-green-600 hover:text-green-800 focus:outline-none"
+        className="ml-4 text-white hover:text-green-200 focus:outline-none focus:ring-2 focus:ring-white rounded-full p-1"
         aria-label="Close"
       >
-        <span className="text-xl">&times;</span>
+        <span className="text-xl font-bold">&times;</span>
       </button>
     </div>
   );
 };
 
 SuccessToast.propTypes = {
-    message: PropTypes.string.isRequired,
-    duration: PropTypes.number,
-    onClose: PropTypes.func,
-  };
+  message: PropTypes.string.isRequired,
+  duration: PropTypes.number,
+  onClose: PropTypes.func,
+};
 
 export default SuccessToast;
