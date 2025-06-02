@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
-import resume from "../assets/Collins-Resume.pdf";
+import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+import resume from "../assets/Collins_Software_Developer_Resume.pdf";
 import {
   BsGithub,
   BsStackOverflow,
@@ -10,15 +10,15 @@ import {
   BsWindow,
   BsTerminal,
   BsLaptop,
-  BsDownload
-} from 'react-icons/bs';
+  BsDownload,
+} from "react-icons/bs";
 
 // Resume download
 const DownloadButton = () => {
   return (
     <a
       href={resume}
-      download="Collins-Resume.pdf"
+      download="Collins_Software_Developer_Resume.pdf"
       className="inline-flex items-center gap-2 px-6 py-3 bg-lightGreen text-white rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg"
     >
       <BsDownload className="text-lg" />
@@ -33,31 +33,31 @@ const Header = () => {
   const displayContent = [
     {
       icon: <BsLaptop className="w-full h-full text-lightGreen" />,
-      alt: "Laptop icon representing web development"
+      alt: "Laptop icon representing web development",
     },
     {
       icon: <BsCode className="w-full h-full text-lightGreen" />,
-      alt: "Code icon representing programming"
+      alt: "Code icon representing programming",
     },
     {
       icon: <BsWindow className="w-full h-full text-lightGreen" />,
-      alt: "Browser window icon representing web applications"
+      alt: "Browser window icon representing web applications",
     },
     {
       icon: <BsTerminal className="w-full h-full text-lightGreen" />,
-      alt: "Terminal icon representing development environment"
-    }
+      alt: "Terminal icon representing development environment",
+    },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % displayContent.length
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % displayContent.length
       );
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [displayContent.length]);
 
   return (
     <div>
@@ -66,16 +66,28 @@ const Header = () => {
           <p className="font-bold lg:text-3xl">collinsOmondi</p>
         </div>
         <div className="flex gap-7 pt-6 lg:pt-0 md:pt-0">
-          <a href="https://github.com/DevOmondi" className="hover:text-lightGreen transition-colors">
+          <a
+            href="https://github.com/DevOmondi"
+            className="hover:text-lightGreen transition-colors"
+          >
             <BsGithub />
           </a>
-          <a href="https://stackoverflow.com/users/12764403/collins-omondi" className="hover:text-lightGreen transition-colors">
+          <a
+            href="https://stackoverflow.com/users/12764403/collins-omondi"
+            className="hover:text-lightGreen transition-colors"
+          >
             <BsStackOverflow />
           </a>
-          <a href="https://www.linkedin.com/in/collinsomondi/" className="hover:text-lightGreen transition-colors">
+          <a
+            href="https://www.linkedin.com/in/collinsomondi/"
+            className="hover:text-lightGreen transition-colors"
+          >
             <BsLinkedin />
           </a>
-          <a href="https://twitter.com/Dev_Omondi" className="hover:text-lightGreen transition-colors">
+          <a
+            href="https://twitter.com/Dev_Omondi"
+            className="hover:text-lightGreen transition-colors"
+          >
             <BsTwitter />
           </a>
         </div>
@@ -97,9 +109,11 @@ const Header = () => {
           </h1>
 
           <p className="mx-8 text-center mt-8 text-lightGrey lg:text-right lg:pb-8 md:text-right md:pb-6 text-lg">
-            Hey there! I&apos;m <span className="font-semibold text-black">Collins Omondi</span>,
-            a full-stack developer crafting intuitive and responsive web experiences.
-            I turn complex problems into elegant, user-friendly solutions.
+            Hey there! I&apos;m{" "}
+            <span className="font-semibold text-black">Collins Omondi</span>, a
+            full-stack developer crafting intuitive and responsive web
+            experiences. I turn complex problems into elegant, user-friendly
+            solutions.
           </p>
 
           <div className="flex flex-col md:flex-row lg:flex-row items-center justify-end gap-6 mx-8 mt-8">

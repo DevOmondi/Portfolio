@@ -8,8 +8,8 @@ import codeKenyaImg from "../assets/CodeKenya_SS.png";
 import weekWiseImg from "../assets/Weekwise_SS.png";
 import karegivvImg from "../assets/karegivv_SS.png";
 import dokiMisImg from "../assets/Doki-Healthcare-MIS.png";
-import toursWebsiteImg from "../assets/Tours-Tembea.png";
 import mjengoTrackerImg from "../assets/mjengo-tracker_hero.png";
+import placeshqImg from "../assets/placeshq.png";
 
 const Projects = () => {
   return (
@@ -43,9 +43,23 @@ const Projects = () => {
           codeLink="https://github.com/Okemwag/CodeKenya"
         />
         <ProjectCard
+          projectImg={placeshqImg}
+          projectTitle="PLACESHQ"
+          projectLang={["NEXTJS", "TAILWINDCSS", "FASTAPI"]}
+          siteLink="https://placeshq.com/"
+          codeLink="https://github.com/Places-Remote-Spaces"
+        />
+        <ProjectCard
           projectImg={weekWiseImg}
           projectTitle="WEEKWISE"
-          projectLang={["PAYPAL", "TAILWINDCSS", "NEXTJS", "EXPRESSJS", "POSTGRESQL", "OPEN AI"]}
+          projectLang={[
+            "PAYPAL",
+            "TAILWINDCSS",
+            "NEXTJS",
+            "EXPRESSJS",
+            "POSTGRESQL",
+            "OPEN AI",
+          ]}
           siteLink="https://weekwise.me/"
           codeLink="https://github.com/DevOmondi/weekwise"
         />
@@ -69,13 +83,6 @@ const Projects = () => {
           projectLang={["MATERIALUI", "JAVASCRIPT", "REACTJS"]}
           siteLink="https://admin.binarypay.co.ke/"
           codeLink="https://github.com/DevOmondi/Binary-Pay-Dashboard"
-        />
-        <ProjectCard
-          projectImg={toursWebsiteImg}
-          projectTitle="CAMPING SINGLE PAGE WEBSITE"
-          projectLang={["NEXTJS", "TAILWINDCSS"]}
-          siteLink="https://tour-safari.vercel.app/"
-          codeLink="https://github.com/DevOmondi/Tours"
         />
 
         <ProjectCard
