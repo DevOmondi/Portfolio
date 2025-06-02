@@ -3,7 +3,7 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import WhatsAppButton from "./Components/WhatsappBtn";
+import WhatsAppButton from "./Components/WhatsAppButton"
 function App() {
   return (
     <>

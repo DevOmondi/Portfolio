@@ -1,5 +1,4 @@
 // import React from 'react';
-// import { MessageSquare } from 'lucide-react';
 import { BsWhatsapp } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 
