@@ -36,10 +36,12 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+    // console.log("Form Data:", formData);
+
+    const formId = import.meta.env.VITE_FORMSPREE_FORM_ID || "mblyjdlr";
 
     try {
-      const response = await fetch(`https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_FORM_ID}`, {
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
@@ -48,7 +50,7 @@ const Contact = () => {
       });
       console.log("Response:", response);
       // if (response.ok) {
-        setShowSuccessToast(true);
+      setShowSuccessToast(true);
       // }
     } catch (error) {
       alert("There was an error submitting the form. Please try again later.");
