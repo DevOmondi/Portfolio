@@ -1,9 +1,8 @@
 // import React from 'react'
 import {
   BsGithub,
-  BsStackOverflow,
   BsLinkedin,
-  BsTwitter,
+  BsTwitterX,
 } from "react-icons/bs";
 
 const Footer = () => {
@@ -17,14 +16,11 @@ const Footer = () => {
           <a href="https://github.com/DevOmondi">
             <BsGithub className="hover:text-lightGreen" />
           </a>
-          <a href="https://stackoverflow.com/users/12764403/collins-omondi">
-            <BsStackOverflow className="hover:text-lightGreen" />
-          </a>
           <a href="https://www.linkedin.com/in/collinsomondi/">
             <BsLinkedin className="hover:text-lightGreen" />
           </a>
           <a href="https://twitter.com/Dev_Omondi">
-            <BsTwitter className="hover:text-lightGreen" />
+            <BsTwitterX className="hover:text-lightGreen" />
           </a>
         </div>
       </div>

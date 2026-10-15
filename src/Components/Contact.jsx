@@ -103,7 +103,7 @@ const Contact = () => {
                 <div
                   className={`${
                     nameFocus ? "bg-lightGreen" : "bg-lightGrey"
-                  } h-[1px] w-[90%] mt-[1rem] mx-auto`}
+                  } h-px w-[90%] mt-[1rem] mx-auto`}
                 ></div>
               </div>
               {/* EMAIL */}
@@ -119,7 +119,7 @@ const Contact = () => {
                 <div
                   className={`${
                     emailFocus ? "bg-lightGreen" : "bg-lightGrey"
-                  } h-[1px] w-[90%] mt-[1rem] mx-auto`}
+                  } h-px w-[90%] mt-[1rem] mx-auto`}
                 ></div>
               </div>
               {/* MESSAGE */}
@@ -137,7 +137,7 @@ const Contact = () => {
                 <div
                   className={`${
                     messageFocus ? "bg-lightGreen" : "bg-lightGrey"
-                  } h-[1px] w-[90%] mt-[1rem] mx-auto`}
+                  } h-px w-[90%] mt-[1rem] mx-auto`}
                 ></div>
               </div>
               {/* SEND MESSAGE BTN */}
@@ -156,7 +156,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="h-[1px] w-[90%] lg:w-[85%] mt-[1rem] bg-lightGrey mx-auto"></div>
+        <div className="h-px w-[90%] lg:w-[85%] mt-[1rem] bg-lightGrey mx-auto"></div>
       </div>
     </Element>
   );

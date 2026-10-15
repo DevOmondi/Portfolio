@@ -41,7 +41,7 @@ const Skills = () => {
           <p className="text-lightGrey">2 Year Experience</p>
         </div>
       </div>
-      <div className="h-[1px] w-[90%] mt-[1rem] bg-lightGrey mx-auto lg:hidden"></div>
+      <div className="h-px w-[90%] mt-[1rem] bg-lightGrey mx-auto lg:hidden"></div>
     </div>
   );
 };
