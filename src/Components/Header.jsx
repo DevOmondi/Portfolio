@@ -3,9 +3,8 @@ import { Link } from "react-scroll";
 import resume from "../assets/Collins_Software_Developer_Resume.pdf";
 import {
   BsGithub,
-  BsStackOverflow,
   BsLinkedin,
-  BsTwitter,
+  BsTwitterX,
   BsCode,
   BsWindow,
   BsTerminal,
@@ -73,12 +72,6 @@ const Header = () => {
             <BsGithub />
           </a>
           <a
-            href="https://stackoverflow.com/users/12764403/collins-omondi"
-            className="hover:text-lightGreen transition-colors"
-          >
-            <BsStackOverflow />
-          </a>
-          <a
             href="https://www.linkedin.com/in/collinsomondi/"
             className="hover:text-lightGreen transition-colors"
           >
@@ -88,7 +81,7 @@ const Header = () => {
             href="https://twitter.com/Dev_Omondi"
             className="hover:text-lightGreen transition-colors"
           >
-            <BsTwitter />
+            <BsTwitterX />
           </a>
         </div>
       </div>

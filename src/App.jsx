@@ -7,7 +7,7 @@ import WhatsAppButton from "./Components/WhatsAppButton"
 function App() {
   return (
     <>
-      <div className="bg-darkBg text-white h-[100%] font-spaceGrotesk">
+      <div className="bg-darkBg text-white min-h-screen font-spaceGrotesk">
         <WhatsAppButton />
         <Header />
         <Skills />
