@@ -11,6 +11,7 @@ import {
   BsLaptop,
   BsDownload,
 } from "react-icons/bs";
+import ScrollReveal from "./ScrollReveal";
 
 // Resume download
 const DownloadButton = () => {
@@ -28,6 +29,7 @@ const DownloadButton = () => {
 
 const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const displayContent = [
     {
@@ -49,49 +51,105 @@ const Header = () => {
   ];
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentImageIndex(
         (prevIndex) => (prevIndex + 1) % displayContent.length
       );
-    }, 5000);
+    }, 4500);
 
     return () => clearInterval(timer);
-  }, [displayContent.length]);
+  }, [displayContent.length, isPaused]);
 
   return (
     <div>
-      <div className="mx-auto pt-4 w-[40%] lg:flex lg:items-center lg:justify-between lg:w-[90%] lg:text-xl md:flex md:items-center md:justify-between md:w-[90%] md:text-xl">
-        <div className="pl-4">
-          <p className="font-bold lg:text-3xl">collinsOmondi</p>
+      <ScrollReveal animation="fade-down" duration={600}>
+        <div className="mx-auto pt-4 w-[40%] lg:flex lg:items-center lg:justify-between lg:w-[90%] lg:text-xl md:flex md:items-center md:justify-between md:w-[90%] md:text-xl">
+          <div className="pl-4">
+            <p className="font-bold lg:text-3xl">collinsOmondi</p>
+          </div>
+          <div className="flex gap-7 pt-6 lg:pt-0 md:pt-0">
+            <a
+              href="https://github.com/DevOmondi"
+              className="hover:text-lightGreen transition-colors"
+            >
+              <BsGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/collinsomondi/"
+              className="hover:text-lightGreen transition-colors"
+            >
+              <BsLinkedin />
+            </a>
+            <a
+              href="https://twitter.com/Dev_Omondi"
+              className="hover:text-lightGreen transition-colors"
+            >
+              <BsTwitterX />
+            </a>
+          </div>
         </div>
-        <div className="flex gap-7 pt-6 lg:pt-0 md:pt-0">
-          <a
-            href="https://github.com/DevOmondi"
-            className="hover:text-lightGreen transition-colors"
-          >
-            <BsGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/collinsomondi/"
-            className="hover:text-lightGreen transition-colors"
-          >
-            <BsLinkedin />
-          </a>
-          <a
-            href="https://twitter.com/Dev_Omondi"
-            className="hover:text-lightGreen transition-colors"
-          >
-            <BsTwitterX />
-          </a>
-        </div>
-      </div>
+      </ScrollReveal>
 
       <div className="lg:flex lg:w-[92%] lg:mx-auto lg:items-center lg:pt-12 md:flex md:w-[92%] md:mx-auto md:items-center md:pt-12">
-        <div className="w-[40%] mx-auto mt-4 aspect-square relative lg:h-[600px] md:h-[400px] flex items-center justify-center bg-gray-50 rounded-lg shadow-lg transition-all duration-500 hover:shadow-xl">
-          {displayContent[currentImageIndex].icon}
-        </div>
+        <ScrollReveal
+          animation="fade-right"
+          duration={800}
+          className="w-[40%] mx-auto mt-4 aspect-square relative lg:h-[600px] md:h-[400px]"
+        >
+          <div
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            className="w-full h-full relative flex items-center justify-center bg-gray-50 rounded-lg shadow-lg transition-all duration-500 hover:shadow-xl overflow-hidden"
+          >
+            {displayContent.map((item, index) => {
+              const isActive = index === currentImageIndex;
+              return (
+                <div
+                  key={index}
+                  role="img"
+                  aria-label={item.alt}
+                  className={`absolute inset-0 flex items-center justify-center p-10 lg:p-20 transition-all duration-700 ease-in-out ${
+                    isActive
+                      ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 scale-90 translate-y-4 pointer-events-none"
+                  }`}
+                >
+                  <div
+                    className={`w-full h-full flex items-center justify-center ${
+                      isActive ? "animate-float" : ""
+                    }`}
+                  >
+                    {item.icon}
+                  </div>
+                </div>
+              );
+            })}
 
-        <div className="flex-1 ml-8">
+            {/* Slide Indicator Dots */}
+            <div className="absolute bottom-4 flex gap-2 z-10">
+              {displayContent.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentImageIndex
+                      ? "w-6 bg-lightGreen"
+                      : "w-2 bg-gray-300 hover:bg-gray-400"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal
+          animation="fade-left"
+          duration={800}
+          delay={150}
+          className="flex-1 ml-8"
+        >
           <h1 className="text-2xl font-bold text-center mt-8 mx-8 lg:text-5xl lg:text-right lg:pb-8 md:text-3xl md:text-right md:pb-6">
             Transforming Ideas into
             <span className="block mt-2">
@@ -124,7 +182,7 @@ const Header = () => {
 
             <DownloadButton />
           </div>
-        </div>
+        </ScrollReveal>
       </div>
 
       <div className="h-px w-[90%] mt-16 bg-lightGrey mx-auto"></div>

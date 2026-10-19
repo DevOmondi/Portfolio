@@ -14,6 +14,8 @@ import {
 } from "react-icons/si";
 import { TbDevices } from "react-icons/tb";
 
+import ScrollReveal from "./ScrollReveal";
+
 const skills = [
   { name: "HTML", icon: SiHtml5 },
   { name: "CSS", icon: SiCss },
@@ -34,12 +36,14 @@ const Skills = () => {
   return (
     <div>
       <div className="w-[90%] mx-auto text-center grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-12 mt-12 mb-16 lg:mb-36">
-        {skills.map((skill) => {
+        {skills.map((skill, index) => {
           const Icon = skill.icon;
           return (
-            <div
+            <ScrollReveal
               key={skill.name}
-              className="flex flex-col items-center justify-center p-4 rounded-xl hover:bg-darkGrey/40 transition-all duration-300 group"
+              animation="fade-up"
+              delay={(index % 4) * 70}
+              className="flex flex-col items-center justify-center p-4 rounded-xl hover:bg-darkGrey/40 transition-all duration-300 group cursor-default"
             >
               <h1 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 group-hover:text-lightGreen transition-colors duration-300">
                 {skill.name}
@@ -47,7 +51,7 @@ const Skills = () => {
               <div className="text-4xl lg:text-5xl text-lightGreen group-hover:scale-110 transition-transform duration-300">
                 <Icon />
               </div>
-            </div>
+            </ScrollReveal>
           );
         })}
       </div>
