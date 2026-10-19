@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Element } from "react-scroll";
 
 import SuccessToast from "./SuccessToast";
+import ScrollReveal from "./ScrollReveal";
 
 const Contact = () => {
   const [nameFocus, setNameFocus] = useState(false);
@@ -71,7 +72,7 @@ const Contact = () => {
           )}
         </div>
         <div className="lg:flex lg:w-[85%] mx-auto md:w-[70%] lg:pt-[3rem] lg:justify-between">
-          <div className="lg:w-[30%]">
+          <ScrollReveal animation="fade-right" className="lg:w-[30%]">
             <h1 className="pt-[3rem] pb-[2rem] text-center lg:text-left text-4xl lg:text-8xl md:text-6xl font-bold">
               Contact
             </h1>
@@ -86,9 +87,9 @@ const Contact = () => {
             <p className="mx-[2rem] lg:mx-auto font-bold text-center lg:text-left pb-[3rem] text-xl text-lightGrey">
               collinsomondi778@gmail.com
             </p>
-          </div>
+          </ScrollReveal>
           {/* Form Section */}
-          <div>
+          <ScrollReveal animation="fade-left" delay={150}>
             <form onSubmit={handleSubmit} id="contactForm">
               {/* Name */}
               <div>
@@ -154,7 +155,7 @@ const Contact = () => {
                 </div>
               </div>
             </form>
-          </div>
+          </ScrollReveal>
         </div>
         <div className="h-px w-[90%] lg:w-[85%] mt-[1rem] bg-lightGrey mx-auto"></div>
       </div>
