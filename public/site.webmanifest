@@ -1,0 +1,18 @@
+{
+  "name": "Collins Omondi | Full-Stack Developer",
+  "short_name": "Collins Omondi",
+  "description": "Portfolio of Collins Omondi, Full-Stack Software Developer specializing in React, Next.js, PHP, Symfony, and PostgreSQL.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151515",
+  "theme_color": "#151515",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

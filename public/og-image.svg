@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="glowTopRight" cx="85%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#4EE1A0" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#4EE1A0" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#151515" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowBottomLeft" cx="15%" cy="85%" r="55%">
+      <stop offset="0%" stop-color="#4EE1A0" stop-opacity="0.15" />
+      <stop offset="60%" stop-color="#4EE1A0" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#151515" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#242424" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#1b1b1b" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#D9D9D9" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4EE1A0" />
+      <stop offset="100%" stop-color="#6df5b9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Dark Canvas -->
+  <rect width="1200" height="630" fill="#151515" />
+  
+  <!-- Subtle Ambient Glows -->
+  <rect width="1200" height="630" fill="url(#glowTopRight)" />
+  <rect width="1200" height="630" fill="url(#glowBottomLeft)" />
+
+  <!-- Subtle Grid Pattern -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="630" />
+    <line x1="200" y1="0" x2="200" y2="630" />
+    <line x1="300" y1="0" x2="300" y2="630" />
+    <line x1="400" y1="0" x2="400" y2="630" />
+    <line x1="500" y1="0" x2="500" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="700" y1="0" x2="700" y2="630" />
+    <line x1="800" y1="0" x2="800" y2="630" />
+    <line x1="900" y1="0" x2="900" y2="630" />
+    <line x1="1000" y1="0" x2="1000" y2="630" />
+    <line x1="1100" y1="0" x2="1100" y2="630" />
+    
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="400" x2="1200" y2="400" />
+    <line x1="0" y1="500" x2="1200" y2="500" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+  </g>
+
+  <!-- Main Card Container -->
+  <rect x="70" y="60" width="1060" height="510" rx="28" fill="url(#cardGrad)" stroke="#333333" stroke-width="1.5" />
+  
+  <!-- Accent Line at top of card -->
+  <path d="M 70 88 A 28 28 0 0 1 98 60 L 350 60 L 320 62 L 70 62 Z" fill="#4EE1A0" />
+
+  <!-- Status Pill -->
+  <g transform="translate(130, 115)">
+    <rect width="260" height="38" rx="19" fill="#151515" stroke="#4EE1A0" stroke-opacity="0.35" stroke-width="1" />
+    <circle cx="22" cy="19" r="5" fill="#4EE1A0" />
+    <text x="36" y="24" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="14" font-weight="600" fill="#4EE1A0" letter-spacing="0.5">FULL-STACK DEVELOPER</text>
+  </g>
+
+  <!-- Name & Title -->
+  <text x="130" y="235" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="68" font-weight="700" fill="url(#textGrad)" letter-spacing="-1.5">
+    Collins Omondi
+  </text>
+  
+  <text x="130" y="295" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="30" font-weight="600" fill="url(#brandGrad)">
+    Transforming Ideas into Digital Experiences
+  </text>
+
+  <text x="130" y="348" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="20" font-weight="400" fill="#D9D9D9" opacity="0.9">
+    Building intuitive, high-performance web applications and scalable solutions.
+  </text>
+
+  <!-- Tech Badges -->
+  <g transform="translate(130, 400)">
+    <!-- React -->
+    <rect x="0" y="0" width="95" height="36" rx="8" fill="#151515" stroke="#333333" stroke-width="1" />
+    <text x="47.5" y="23" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">React JS</text>
+
+    <!-- Next.js -->
+    <rect x="107" y="0" width="95" height="36" rx="8" fill="#151515" stroke="#333333" stroke-width="1" />
+    <text x="154.5" y="23" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">Next JS</text>
+
+    <!-- Vue.js -->
+    <rect x="214" y="0" width="85" height="36" rx="8" fill="#151515" stroke="#333333" stroke-width="1" />
+    <text x="256.5" y="23" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">Vue JS</text>
+
+    <!-- PHP -->
+    <rect x="311" y="0" width="65" height="36" rx="8" fill="#151515" stroke="#333333" stroke-width="1" />
+    <text x="343.5" y="23" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">PHP</text>
+
+    <!-- Symfony -->
+    <rect x="388" y="0" width="95" height="36" rx="8" fill="#151515" stroke="#333333" stroke-width="1" />
+    <text x="435.5" y="23" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">Symfony</text>
+
+    <!-- PostgreSQL -->
+    <rect x="495" y="0" width="115" height="36" rx="8" fill="#151515" stroke="#333333" stroke-width="1" />
+    <text x="552.5" y="23" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">PostgreSQL</text>
+
+    <!-- Tailwind -->
+    <rect x="622" y="0" width="125" height="36" rx="8" fill="#151515" stroke="#333333" stroke-width="1" />
+    <text x="684.5" y="23" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">Tailwind CSS</text>
+
+    <!-- Node.js -->
+    <rect x="759" y="0" width="95" height="36" rx="8" fill="#151515" stroke="#333333" stroke-width="1" />
+    <text x="806.5" y="23" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">Node JS</text>
+  </g>
+
+  <!-- Footer Info Line -->
+  <line x1="130" y1="475" x2="1010" y2="475" stroke="#333333" stroke-width="1" />
+
+  <text x="130" y="515" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="17" font-weight="500" fill="#888888">
+    github.com/DevOmondi
+  </text>
+
+  <text x="1010" y="515" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="17" font-weight="600" fill="#4EE1A0" text-anchor="end">
+    devomondi.dev
+  </text>
+</svg>
+

@@ -2,14 +2,14 @@ import { Link } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 import ScrollReveal from "./ScrollReveal";
 
-import audiophileImg from "../assets/project_images/audiophile_project.webp";
-import saizunaImg from "../assets/project_images/saizuna_project.webp";
-import codeKenyaImg from "../assets/project_images/codekenya_project.webp";
-import finfunImg from "../assets/project_images/finfun_project.webp";
-import heavensImg from "../assets/project_images/heavens_project.webp";
-import lavostiImg from "../assets/project_images/lavosti_project.webp";
-import mjengoTrackerImg from "../assets/project_images/mjengo-tracker_project.webp";
-import langiriImg from "../assets/project_images/langiri_project.webp";
+import audiophileImg from "/project_images/audiophile_project.webp";
+import saizunaImg from "/project_images/saizuna_project.webp";
+import codeKenyaImg from "/project_images/codekenya_project.webp";
+import finfunImg from "/project_images/finfun_project.webp";
+import heavensImg from "/project_images/heavens_project.webp";
+import lavostiImg from "/project_images/lavosti_project.webp";
+import mjengoTrackerImg from "/project_images/mjengo-tracker_project.webp";
+import langiriImg from "/project_images/langiri_project.webp";
 
 const projects = [
   {
