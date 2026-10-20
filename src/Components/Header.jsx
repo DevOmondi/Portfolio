@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import resume from "../assets/Collins_Software_Developer_Resume.pdf";
+import resume from "/Collins_Software_Developer_Resume.pdf";
 import {
   BsGithub,
   BsLinkedin,
